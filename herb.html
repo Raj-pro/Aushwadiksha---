@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Aushwadiksha: Discover medicinal plants' uses, benefits, cultivation, and cultural significance using data from AYUSH" />
+        
+        <!-- OG Meta Tags -->
+        <meta property="og:site_name" content="" />
+        <meta property="og:site" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <!-- Webpage Title -->
+        <title>Herb - Aushwadiksha </title>
+
+        <!-- Styles -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+        <link href="css/fontawesome-all.css" rel="stylesheet" />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+        <link href="css/swiper.css" rel="stylesheet" />
+        <link href="css/magnific-popup.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+
+        <!-- Favicon  -->
+        <link rel="icon" href="images/favicon.png" />
+
+    </head>
+    <body data-spy="scroll" data-target=".fixed-top">
+        
+        <!-- Navigation -->
+        <nav class="navbar fixed-top">
+            <div class="container mx-auto flex flex-wrap items-center justify-between -mt-2 sm:px-4 lg:flex-nowrap lg:px-8 xl:max-w-6xl">
+                <!-- Image Logo -->
+                <a class="inline-block mr-4 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline" href="index.html">
+                    <img src="images/logo name.png" alt="alternative" class="h-10"/>
+                </a>
+
+                <button class="background-transparent rounded text-xl leading-none hover:no-underline focus:no-underline lg:hidden lg:text-gray-400" type="button" data-toggle="offcanvas">
+                    <span class="navbar-toggler-icon inline-block w-8 h-8 align-middle"></span>
+                </button>
+
+                <div class="navbar-collapse offcanvas-collapse lg:flex lg:flex-grow lg:items-center" id="navbarsExampleDefault">
+                    <ul class="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row">
+                        <li>
+                            <a class="nav-link page-scroll" href="index.html#header">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="index.html#features">Features</a>
+                        </li>
+                        <li>
+                            <a class="nav-link page-scroll" href="index.html#details">Details</a>
+                        </li>
+                        <li >
+                            <a class="nav-link page-scroll" href="terms.html">Disclaimer</a>
+                        </li>
+                    </ul>
+                </div> <!-- end of navbar-collapse -->
+            </div> <!-- end of container -->
+        </nav> <!-- end of navbar -->
+        <!-- end of navigation -->
+
+        <!-- Header -->
+        <header class="ex-header bg-gray">
+            <div class="container mx-auto px-4 sm:px-8 xl:max-w-6xl xl:px-4">
+                <h1 class="xl:ml-24">Herb List</h1>
+            </div> <!-- end of container -->
+        </header> <!-- end of ex-header -->
+        <!-- end of header -->
+
+        <!-- Basic -->
+        <div class="ex-basic-1 py-12">
+            <div class="container mx-auto px-4 sm:px-8 xl:max-w-6xl xl:px-4">
+                <table id="herbTable" class="table-auto w-full border-collapse border border-gray-200">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border border-gray-200 p-2">Plant Name</th>
+                            <th class="border border-gray-200 p-2">Scientific Name</th>
+                            <th class="border border-gray-200 p-2">Parts Used</th>
+                            <th class="border border-gray-200 p-2">Medicine Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <!-- Table data will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div> <!-- end of ex-basic-1 -->
+        <!-- end of basic -->
+        
+        <!-- Footer -->
+        <div class="footer py-8">
+            <div class="container px-4 sm:px-8">
+                <h4 class="mb-8 lg:max-w-3xl lg:mx-auto">Aushwadiksha is a web application to make the knowledge of medicinal plants accessible to everyone. For more information or inquiries, please contact us at <a class="text-indigo-600 hover:text-gray-500" href="mailto:email@domain.com">email@domain.com</a></h4>
+            </div> <!-- end of container -->
+        </div> <!-- end of footer -->
+        <!-- end of footer -->
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-3">
+                <ul class="mb-4 list-unstyled p-small">
+                    <li class="mb-2"><a href="article.html">Article Details</a></li>
+                    <li class="mb-2"><a href="terms.html">Terms & Conditions</a></li>
+                    <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+                <p class="pb-2 p-small statement">Copyright © <a href="#your-link" class="no-underline">Your name</a></p>
+                <p class="pb-2 p-small statement">Distributed by :<a href="https://themewagon.com/" class="no-underline">Themewagon</a></p>
+            </div> 
+        </div> <!-- end of copyright -->
+        <!-- end of copyright -->
+
+        <!-- Scripts -->
+        <script>
+            // Function to fetch and parse CSV data
+            async function fetchHerbData() {
+                const response = await fetch('csv/herblist.csv'); // Corrected file path
+                const data = await response.text();
+                const rows = data.split('\n').slice(1); // Remove header row
+            
+                const tableBody = document.getElementById('herbTable').getElementsByTagName('tbody')[0];
+            
+                rows.forEach(row => {
+                    const cols = row.split(',');
+                    const newRow = tableBody.insertRow();
+            
+                    // Create cells and append to row
+                    const nameCell = newRow.insertCell();
+                    const sciNameCell = newRow.insertCell();
+                    const partsCell = newRow.insertCell();
+                    const descCell = newRow.insertCell();
+            
+                    // Populate cells with data
+                    
+                    nameCell.textContent = cols[1];
+                    sciNameCell.textContent = cols[2];
+                    partsCell.textContent = cols[3];
+                    descCell.textContent = cols[4];
+                });
+            }
+            
+            // Call the function to fetch and display data
+            fetchHerbData();
+        </script>
+
+        <script src="js/jquery.min.js"></script> <!-- jQuery for JavaScript plugins -->
+        <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+        <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+        <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+        <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    </body>
+</html>
