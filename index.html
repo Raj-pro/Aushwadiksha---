@@ -37,10 +37,66 @@
         <link rel="stylesheet" href="styles.css">   
 
         <style>
-            /* Style for hiding slides */
             .hidden {
               display: none !important;
             }
+
+            .card {
+              border: 1px solid #ccc; 
+              border-radius: 8px; 
+              overflow: hidden;
+              transition: transform 0.2s; 
+            }
+            
+            .card:hover {
+              transform: scale(1.05); 
+            }
+            
+            .card-image {
+              width: 100%; 
+              height: auto;
+            }
+            
+            .card-content {
+              padding: 16px; 
+            }
+            
+            .card-header h2 {
+              font-size: 1.5rem; 
+              margin: 0; 
+            }
+            
+            .card-body p {
+              font-size: 1rem; 
+            }
+            
+            @media (max-width: 640px) {
+                .card {
+                    margin: 0 8px; 
+                }
+                .search-bar {
+                    margin: 0 8px; 
+                }
+            }
+            
+            @media (min-width: 641px) and (max-width: 768px) {
+              .card {
+                margin: 0 10px; 
+              }
+            }
+            
+            @media (min-width: 769px) {
+              .card {
+                margin: 0 16px; 
+              }
+            }
+            
+            .hidden {
+              display: none; 
+            }
+
+
+
           </style>
 
 
@@ -129,34 +185,34 @@
 
 
         <!-- Introduction -->
-        <div id="herb" class="pt-4 pb-14 text-center ">
-            <div class="container px-4 py-12 sm:px-8 xl:px-4">
-                <p class="mb-4 text-gray-800 text-3xl leading-10 lg:max-w-5xl lg:mx-auto"> Ayurveda is also called the “science of longevity” because it offers a complete system to live a long healthy life. It offers programs to rejuvenate the body through diet and nutrition. It offers treatment methods to cure many common diseases such as food allergies, which have few modern treatments.</p>
-            </div> <!-- end of container -->
-        </div>
-        <!-- end of introduction -->
+<div id="herb" class="pt-4 pb-14 text-center ">
+    <div class="container px-4 py-12 sm:px-8 xl:px-4">
+        <p class="mb-4 text-gray-800 text-3xl leading-10 lg:max-w-5xl lg:mx-auto"> Ayurveda is also called the “science of longevity” because it offers a complete system to live a long healthy life. It offers programs to rejuvenate the body through diet and nutrition. It offers treatment methods to cure many common diseases such as food allergies, which have few modern treatments.</p>
+    </div> <!-- end of container -->
+</div>
+<!-- end of introduction -->
 
 
-        <div class="slider-1 py-32 bg-green-50 ">
-            <div class="container px-4 sm:px-8">
-                <h2 class="mb-12 text-center lg:max-w-xl lg:mx-auto">Some amazing herb</h2>
-        
-            <div class="search-bar mb-4 text-center flex items-center justify-center">
-                <div class="relative w-full max-w-lg">
-                  <input 
-                    type="text" 
-                    id="searchInput" 
-                    placeholder="Search for a plant..." 
-                    class="search-input px-4 py-2 border rounded-lg bg-transparent text-gray-700 focus:bg-white focus:ring-0 focus:border-gray-400 placeholder-gray-400 w-full pr-16"
-                  >
-                  <button 
-                    onclick="searchPlant()" 
-                    class="search-button absolute inset-y-0 right-0 px-4 py-2 border rounded-lg bg-green-500 text-white focus:outline-none"
-                  >
-                    Search
-                  </button>
-                </div>
+<div class="slider-1 py-32 bg-green-50 ">
+    <div class="container px-4 sm:px-8">
+        <h2 class="mb-12 text-center lg:max-w-xl lg:mx-auto">Some amazing herb</h2>
+
+        <div class="search-bar mb-4 text-center flex items-center justify-center">
+            <div class="relative w-full max-w-lg">
+              <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search for a plant..." 
+                class="search-input px-4 py-2 border rounded-lg bg-transparent text-gray-700 focus:bg-white focus:ring-0 focus:border-gray-400 placeholder-gray-400 w-full pr-16"
+              >
+              <button 
+                onclick="searchPlant()" 
+                class="search-button absolute inset-y-0 right-0 px-4 py-2 border rounded-lg bg-green-500 text-white focus:outline-none"
+              >
+                Search
+              </button>
             </div>
+        </div>
         
             <div class="slider-container">
               <div class="swiper-container card-slider">
@@ -189,7 +245,7 @@
                                 <div class="card-body">
                                     <p><strong>Terrain:</strong> Riverside, Forest/Wild</p>
                                     <p><strong>Parts Used:</strong> Fruit, leaves</p>
-                                    <p><strong>Medicine Description:</strong> Jamun fruit and leaves have been traditionally used for respiratory issues. The fruit can be consumed fresh, and the leaves can be used in teas or decoctions.</p>
+                                    <p ><strong>Medicine Description:</strong> Jamun fruit and leaves have been traditionally used for respiratory issues. The fruit can be consumed fresh, and the leaves can be used in teas or decoctions.</p>
                                 </div>
                             </div>
                         </div>
@@ -383,57 +439,66 @@
 
 
         <!-- Details 2 -->
-        <div id="details" class="py-24  ">
-            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
-                <div class="lg:col-span-7">
-                    <div class="mb-12 lg:mb-0 xl:mr-14">
-                        <img class="inline" src="3d model\g002.png" alt="alternative" />
-                    </div>
-                </div> <!-- end of col -->
-                <div class="lg:col-span-5">
-                    <div class="xl:mt-12">
-                        <h2 class="mb-6">Empowering Your Herbal Exploration:</h2>
-                        <ul class="list mb-7 space-y-2">
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Access real-time herbal info</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>enjoy user-friendly features</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>benefit from effortless integration.</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div> <!-- end of col -->
-            </div> <!-- end of container -->
+    <div id="details" class="py-24">
+    <div class="container mx-auto px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
+        <!-- Image Section: Stack on mobile, grid on larger screens -->
+        <div class="lg:col-span-7 flex justify-center lg:justify-start mb-8 lg:mb-0">
+            <div class="xl:mr-14">
+                <img class="w-full max-w-md lg:max-w-full" src="3d model/g002.png" alt="alternative" />
+            </div>
         </div>
-        <!-- end of details 2 -->
+        <!-- end of col -->
+        
+        <!-- Text Section: Centered on mobile, aligned left on larger screens -->
+        <div class="lg:col-span-5 text-center lg:text-left">
+            <div class="xl:mt-12">
+                <h2 class="mb-6 text-2xl lg:text-4xl font-semibold">Empowering Your Herbal Exploration:</h2>
+                <ul class="list mb-7 space-y-2 text-sm lg:text-base">
+                    <li class="flex justify-center lg:justify-start items-center">
+                        <i class="fas fa-chevron-right mr-2"></i>
+                        <div>Access real-time herbal info</div>
+                    </li>
+                    <li class="flex justify-center lg:justify-start items-center">
+                        <i class="fas fa-chevron-right mr-2"></i>
+                        <div>Enjoy user-friendly features</div>
+                    </li>
+                    <li class="flex justify-center lg:justify-start items-center">
+                        <i class="fas fa-chevron-right mr-2"></i>
+                        <div>Benefit from effortless integration</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end of col -->
+    </div>
+    <!-- end of container -->
+    </div>
+<!-- end of details 2 -->
 
 
 
 
         <!-- Details 3 -->
-        <div class="pt-16 pb-12 bg-green-50">
-            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
-                <div class="lg:col-span-5">
-                    <div class="mb-16 lg:mb-0 xl:mt-16">
-                        <h2 class="mb-6">Explore the Future of Herbal Education</h2>
-                        <p class="mb-4"> Discover how the Virtual Herbal Garden can revolutionize your understanding of medicinal plants. See why users are enthusiastic about this platform and how it supports their educational and professional goals.</p>
-                        <p class="mb-4">We’re here to answer your questions and provide support based on our commitment to excellence. Contact us for more information or to get started with your Virtual Herbal Garden experience.</p>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="lg:col-span-7">
-                    <div class="ml-14">
-                        <img class="inline" src="3d model\g003.png" alt="alternative" />
-                    </div>
-                </div> <!-- end of col -->
-            </div> <!-- end of container -->
+    <div class="pt-16 pb-12 bg-green-50">
+        <div class="container mx-auto px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
+            <!-- Mobile stacking and larger screens layout -->
+            <div class="lg:col-span-5 mb-16 lg:mb-0 xl:mt-16 text-center lg:text-left">
+                <h2 class="mb-6 text-2xl lg:text-4xl font-semibold">Explore the Future of Herbal Education</h2>
+                <p class="mb-4 text-sm lg:text-base"> Discover how the Virtual Herbal Garden can revolutionize your understanding of medicinal plants. See why users are enthusiastic about this platform and how it supports their educational and professional goals.</p>
+                <p class="mb-4 text-sm lg:text-base">We’re here to answer your questions and provide support based on our commitment to excellence. Contact us for more information or to get started with your Virtual Herbal Garden experience.</p>
+            </div> 
+            <!-- end of col -->
+
+            <div class="lg:col-span-7 flex justify-center lg:justify-start">
+                <div class="lg:ml-14">
+                    <img class="w-full max-w-md lg:max-w-full" src="3d model/g003.png" alt="alternative" />
+                </div>
+            </div>
+            <!-- end of col -->
         </div>
-        <!-- end of details 3 -->
+        <!-- end of container -->
+    </div>
+    <!-- end of details 3 -->
 
 
         <!-- Statistics -->
@@ -498,43 +563,55 @@
         <script>
             // Initialize Swiper
             const swiper = new Swiper('.card-slider', {
-              slidesPerView: 3,
-              spaceBetween: 46,
-              pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-              },
-              // Disable Swiping on Search
-              allowTouchMove: true,
+                slidesPerView: 1,  // Default for mobile
+                spaceBetween: 16,  // Smaller spacing on mobile
+                breakpoints: {
+                    640: {  // Small screens like tablets
+                        slidesPerView: 1,
+                        spaceBetween: 8,
+                    },
+                    768: {  // Medium screens
+                        slidesPerView: 2,
+                        spaceBetween: 36,
+                    },
+                    1024: {  // Large screens like desktops
+                        slidesPerView: 3,
+                        spaceBetween: 44,
+                    },
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                allowTouchMove: true,
             });
         
             function searchPlant() {
-              const input = document.getElementById('searchInput').value.toLowerCase();
-              const slides = document.querySelectorAll('.swiper-slide');
-              let resultCount = 0;
+                const input = document.getElementById('searchInput').value.toLowerCase();
+                const slides = document.querySelectorAll('.swiper-slide');
+                let resultCount = 0;
         
-              slides.forEach(slide => {
-                const plantName = slide.getAttribute('data-plant').toLowerCase();
-                if (plantName.includes(input)) {
-                  slide.classList.remove('hidden');
-                  resultCount++;
+                slides.forEach(slide => {
+                    const plantName = slide.getAttribute('data-plant').toLowerCase();
+                    if (plantName.includes(input)) {
+                        slide.classList.remove('hidden');
+                        resultCount++;
+                    } else {
+                        slide.classList.add('hidden');
+                    }
+                });
+        
+                // Update Swiper after changing slide visibility
+                swiper.update();
+        
+                // Stop Swiper if only one slide is shown
+                if (resultCount <= 1) {
+                    swiper.allowTouchMove = false;
                 } else {
-                  slide.classList.add('hidden');
+                    swiper.allowTouchMove = true;
                 }
-              });
-        
-              // Update Swiper after changing slide visibility
-              swiper.update();
-        
-              // Stop Swiper if only one slide is shown
-              if (resultCount <= 1) {
-                swiper.allowTouchMove = false;
-              } else {
-                swiper.allowTouchMove = true;
-              }
             }
-          </script>
-
+        </script>
         
         <script src="js/jquery.min.js"></script> <!-- jQuery for JavaScript plugins -->
         <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
