@@ -11,6 +11,8 @@ Aushwadiksha is a web application that introduces users to the world of Ayurveda
 - HTML
 - CSS
 - JavaScript
+- jquery
+- spline
 
 ## Demo:
 Visit the live website at: <https://aush0.netlify.app/>
