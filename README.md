@@ -16,6 +16,8 @@ Aushwadiksha is a web application that introduces users to the world of Ayurveda
 
 ## Demo:
 Visit the live website at: <https://aush0.netlify.app/>
+<img scr="https://github.com/user-attachments/assets/87e0c921-7d9d-4bda-9862-b9c42c27227c">
+
 
 ## Repository Contents:
 - All source code for the Aushwadiksha website.
